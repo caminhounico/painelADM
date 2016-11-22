@@ -21,6 +21,6 @@ class UsersTableSeeder extends Seeder
             'cel-number' => '3187105486',
             'password' => bcrypt('secret'),
         ]);
-        factory(App\User::class, 20)->create();
+        factory(App\User::class, 100)->create();
     }
 }
