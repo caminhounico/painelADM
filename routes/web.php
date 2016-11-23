@@ -12,12 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Auth::routes();
-Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => 'auth'], function (){
+Route::group([
+    'as' => 'admin.',
+    'prefix' => 'admin',
+    'middleware' => 'auth'
+], function () {
     Route::get('/', 'PanelController@index')->name('home');
 });
 
-Route::get('/home', 'HomeController@index');
+
