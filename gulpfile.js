@@ -14,15 +14,27 @@ require('laravel-elixir-vue-2');
  */
 
 elixir(function(mix) {
+
+  //Home
     mix.styles([
         'semantic.css',
         'custom.css'
     ], 'public/assets/css/style.css');
-
-
     mix.scripts([
         '../../../node_modules/jquery/dist/jquery.js',
         'semantic.js',
         'custom.js'
     ], 'public/assets/js/script.js')
+
+    //Admin
+    mix.styles([
+        'admin/css/semantic.css',
+        'admin/css/custom.css'
+    ], 'public/assets/admin/css/style.css');
+
+    mix.scripts([
+        '../../../node_modules/jquery/dist/jquery.js',
+        'admin/js/semantic.js',
+        'admin/js/custom.js'
+    ], 'public/assets/admin/js/script.js')
 });

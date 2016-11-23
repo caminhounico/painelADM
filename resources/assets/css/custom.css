@@ -50,6 +50,13 @@ p {
     font-size: 1.8em;
     cursor: pointer;
 }
+.a-login{
+    color: #ffb217 !important;
+}
+.a-login:hover{
+    color: #fff !important;
+    background-color: rgba(255,178,23,0.4) !important;
+}
 
 /******************************
 *******ABOUT CONTENT*********

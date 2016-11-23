@@ -24,6 +24,7 @@
                         <a class="item">Sobre</a>
                         <a class="item">Produtos</a>
                         <a class="item">Contato</a>
+                        <a class="item a-login" href="{{route('admin.login')}}"><i class="sign in icon"></i> Login</a>
                     </div>
                 </div>
             </div>

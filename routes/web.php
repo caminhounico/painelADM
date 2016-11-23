@@ -19,9 +19,10 @@ Auth::routes();
 Route::group([
     'as' => 'admin.',
     'prefix' => 'admin',
-    'middleware' => 'auth'
+    'middleware' => ['auth']
 ], function () {
     Route::get('/', 'PanelController@index')->name('home');
+    Route::get('/login', 'Auth\LoginController@login')->name('login');
 });
 
 
