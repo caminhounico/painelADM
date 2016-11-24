@@ -26,14 +26,12 @@
 </header>
 
 
-<main class="form-bg">
-
-    @yield('content')
-
-
-
-
+<main>
+        @yield('content')
 </main>
+
+
+
 <footer class="content footer">
     <div class="ui container">
         <h1 class="ui inverted header">
@@ -74,8 +72,7 @@
     <div class="ui hidden clearing divider "></div>
 
 </footer>
-<div  class="ui center aligned container"><i class="copyright icon"></i>2016  -  WEB Systems</div>
-
+<div class="ui center aligned container"><i class="copyright icon"></i>2016 - WEB Systems</div>
 
 
 {{--<div class="collapse navbar-collapse" id="app-navbar-collapse">--}}
