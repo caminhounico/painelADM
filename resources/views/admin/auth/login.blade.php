@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="form-container">
-        <div class="ui container ">
+        <div class="ui container">
 
-            <div class="ui raised segment form-segnment">
+            <div class="ui raised fluid segment">
                 <h1 class="ui header">
                     <i class="dashboard icon"></i>
                     <div class="content">
@@ -20,18 +20,18 @@
                     <label>Email</label>
                     <div class="ui left icon input">
                         <input type="email" name="email" placeholder="Informe seu email..." value="{{old('email')}}"
-                               />
+                        />
                         <i class="user icon"></i>
                     </div>
                 </div>
                 <div class="field">
                     <label>Senha</label>
                     <div class="ui left icon input">
-                        <input type="password" name="password" placeholder="Insira sua senha..." >
+                        <input type="password" name="password" placeholder="Insira sua senha...">
                         <i class="lock icon"></i>
                     </div>
                 </div>
-                <button type="submit" class="ui basic green button">
+                <button type="submit" class="ui basic green button ">
                     <i class="sign in icon"></i>Login
                 </button>
                 <a class="ui basic small button" href="{{ url('/password/reset') }}">
@@ -42,9 +42,12 @@
                     Entrar com o Facebook
                 </div>
                 <div class="ui hidden clearing divider"></div>
-                {{Form::close()}}
 
+                {{Form::close()}}
             </div>
+
+        @include('admin.auth.partials.alert')
+
         </div>
     </div>
 

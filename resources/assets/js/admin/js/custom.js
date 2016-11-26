@@ -7,4 +7,7 @@ $(function () {
                 terms: 'checked'
             }
         });
+    $('.ui .message')
+        .transition('flash')
+    ;
 });

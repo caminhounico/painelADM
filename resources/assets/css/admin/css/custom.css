@@ -2,7 +2,7 @@
 ********GENERAL CONFIG*********
 ******************************/
 body {
-    background: rgba(11,41,58,0.6) url("/public/assets/admin/css/images/bg-10-full.jpg") no-repeat center center;
+    background: rgba(11,41,58,0.6) url("images/bg-10-full.jpg") no-repeat center center;
 }
 
 h1 {
@@ -18,8 +18,9 @@ p {
 
 
 main{
-    margin-top: 30px;
+    margin-top: 150px;
     margin-bottom: 80px;
+    height: 600px;
 }
 
 
@@ -35,11 +36,12 @@ main{
 /******************************
 *********** FORM **********
 ******************************/
-
-.ui.raised.segment{
-    margin: 0 20%!important;
+.form-container{
+    max-width: 50%;
+    margin: 0 25%;
 
 }
+
 .custom-form .field input{
     border-radius: 0 !important;
     padding: 15px 0 !important;

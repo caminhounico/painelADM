@@ -32729,6 +32729,9 @@ $(function () {
                 terms: 'checked'
             }
         });
+    $('.ui .message')
+        .transition('flash')
+    ;
 });
 
 //# sourceMappingURL=script.js.map
