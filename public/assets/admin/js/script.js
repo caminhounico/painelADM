@@ -32720,18 +32720,5 @@ $.fn.visibility.settings = {
 
 })( jQuery, window, document );
 
-$(function () {
-    $('.ui.form')
-        .form({
-            fields: {
-                email: ['empty', 'email'],
-                password: ['minLength[6]', 'empty'],
-                terms: 'checked'
-            }
-        });
-    $('.ui .message')
-        .transition('flash')
-    ;
-});
 
 //# sourceMappingURL=script.js.map

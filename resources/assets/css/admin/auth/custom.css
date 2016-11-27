@@ -23,6 +23,11 @@ main{
     height: 600px;
 }
 
+.centered-icon{
+
+
+}
+
 
 /******************************
 *********** NAV MENU **********
@@ -37,9 +42,8 @@ main{
 *********** FORM **********
 ******************************/
 .form-container{
-    max-width: 50%;
-    margin: 0 25%;
-
+    max-width: 600px;
+    margin: auto;
 }
 
 .custom-form .field input{

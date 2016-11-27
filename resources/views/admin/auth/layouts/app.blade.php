@@ -8,10 +8,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title></title>
+    <title>@yield('title')</title>
 
     <!-- Styles -->
-    <link href="assets/admin/css/style.css" rel="stylesheet">
+    <link href="{{env('APP_URL')}}/assets/admin/auth/css/style.css" rel="stylesheet">
 
 
 </head>
@@ -20,7 +20,7 @@
 <header>
     <nav class="ui inverted top attached menu">
         <div class="item">
-            <img class="" src="/assets/css/images/logo.png">
+            <img class="" src="{{env('APP_URL')}}/assets/css/images/logo.png">
         </div>
     </nav>
 </header>
@@ -75,49 +75,11 @@
 <div class="ui center aligned container"><i class="copyright icon"></i>2016 - WEB Systems</div>
 
 
-{{--<div class="collapse navbar-collapse" id="app-navbar-collapse">--}}
-{{--<!-- Left Side Of Navbar -->--}}
-{{--<ul class="nav navbar-nav">--}}
-{{--&nbsp;--}}
-{{--</ul>--}}
-
-{{--<!-- Right Side Of Navbar -->--}}
-{{--<ul class="nav navbar-nav navbar-right">--}}
-{{--<!-- Authentication Links -->--}}
-{{--@if (Auth::guest())--}}
-{{--<li><a href="{{ url('/login') }}">Login</a></li>--}}
-{{--<li><a href="{{ url('/register') }}">Register</a></li>--}}
-{{--@else--}}
-{{--<li class="dropdown">--}}
-{{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">--}}
-{{--{{ Auth::user()->name }} <span class="caret"></span>--}}
-{{--</a>--}}
-
-{{--<ul class="dropdown-menu" role="menu">--}}
-{{--<li>--}}
-{{--<a href="{{ url('/logout') }}"--}}
-{{--onclick="event.preventDefault();--}}
-{{--document.getElementById('logout-form').submit();">--}}
-{{--Logout--}}
-{{--</a>--}}
-
-{{--<form id="logout-form" action="{{ url('/logout') }}" method="POST"--}}
-{{--style="display: none;">--}}
-{{--{{ csrf_field() }}--}}
-{{--</form>--}}
-{{--</li>--}}
-{{--</ul>--}}
-{{--</li>--}}
-{{--@endif--}}
-{{--</ul>--}}
-{{--</div>--}}
-{{--</div>--}}
-{{--</nav>--}}
 
 
 
 
 <!-- Scripts -->
-<script src="assets/admin/js/script.js"></script>
+<script src="{{env('APP_URL')}}/assets/admin/auth/js/script.js"></script>
 </body>
 </html>

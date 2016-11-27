@@ -23,6 +23,7 @@ Route::group([
 ], function () {
     Route::get('/', 'PanelController@index')->name('home');
     Route::get('/login', 'Auth\LoginController@login')->name('login');
+    Route::post('/password/reset', 'Auth\ResetPasswordController@reset')->name('password.reset');
 });
 
 

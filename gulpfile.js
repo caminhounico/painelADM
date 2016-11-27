@@ -28,13 +28,25 @@ elixir(function(mix) {
 
     //Admin
     mix.styles([
-        'admin/css/semantic.css',
-        'admin/css/custom.css'
+        'semantic.css',
+        'admin/custom.css'
     ], 'public/assets/admin/css/style.css');
 
     mix.scripts([
         '../../../node_modules/jquery/dist/jquery.js',
-        'admin/js/semantic.js',
-        'admin/js/custom.js'
+        'semantic.js',
+        'admin/custom.js'
     ], 'public/assets/admin/js/script.js')
+
+    //Admin-AUTH
+    mix.styles([
+        'semantic.css',
+        'admin/auth/custom.css'
+    ], 'public/assets/admin/auth/css/style.css');
+
+    mix.scripts([
+        '../../../node_modules/jquery/dist/jquery.js',
+        'semantic.js',
+        'admin/auth/custom.js'
+    ], 'public/assets/admin/auth/js/script.js')
 });

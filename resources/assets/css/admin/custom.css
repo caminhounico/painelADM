@@ -1,0 +1,31 @@
+/******************************
+********GENERAL CONFIG*********
+******************************/
+
+
+
+
+
+
+/******************************
+********LEFT MENU CONFIG*******
+******************************/
+.color-menu{
+    background-color: #1A2226 !important;
+}
+.brand-item{
+    background-color: #1A2226 !important;
+    padding: 30px 0 !important;
+    text-align: center;
+    color: #fff;
+}
+.brand-item:hover{
+    color: #3db9ec;
+}
+
+.item{
+    background-color: #222D32 !important;
+}
+.item:hover{
+
+}
