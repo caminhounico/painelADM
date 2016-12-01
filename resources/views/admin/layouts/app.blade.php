@@ -13,9 +13,9 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{env('app_url')}}/assets/admin/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{env('app_url')}}/assets/admin/dist/css/AdminLTE.css">
     <!-- AdminLTE Skins-->
-    <link rel="stylesheet" href="{{env('app_url')}}/assets/admin/dist/css/skins/skin-black.min.css">
+    <link rel="stylesheet" href="{{env('app_url')}}/assets/admin/dist/css/skins/skin-black.css">
 
 
     <link rel="stylesheet" href="{{env('app_url')}}/assets/jQuery-File-Upload/css/jquery.fileupload.css">
