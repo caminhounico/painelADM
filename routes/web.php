@@ -21,9 +21,10 @@ Route::group([
     'prefix' => 'admin',
     'middleware' => ['auth']
 ], function () {
-    Route::get('/', 'PanelController@index')->name('home');
+    Route::get('/', 'PanelController@home')->name('home');
     Route::get('/login', 'Auth\LoginController@login')->name('login');
     Route::post('/password/reset', 'Auth\ResetPasswordController@reset')->name('password.reset');
+    Route::post('/avatar', 'UserController@storeAvatar')->name('avatar');
 });
 
 

@@ -1,101 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 2 | Starter</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="{{env('app_url')}}/assets/admin/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{env('app_url')}}/assets/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{env('app_url')}}/assets/admin/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins-->
+    <link rel="stylesheet" href="{{env('app_url')}}/assets/admin/dist/css/skins/skin-black.min.css">
 
 
-    <title>@yield('title')</title>
+    <link rel="stylesheet" href="{{env('app_url')}}/assets/jQuery-File-Upload/css/jquery.fileupload.css">
 
-    <!-- Styles -->
-    <link href="{{env('APP_URL')}}/assets/admin/css/style.css" rel="stylesheet">
-
-
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-<header>
-    <h1>@yield('title')</h1>
-    <p class="tagline">@yield('tagline')</p>
-    <div class="color-menu ui left fixed vertical inverted menu">
-        <div class="brand-item">
-            <h3>:: Web Systems :: </h3>
-        </div>
-
-        <a class="item">Testimonials</a>
-        <a class="item">Sign-in</a>
-        <div class="item">
-            {{Auth::user()->name}}<br>
-            <a href="{{ url('/logout') }}"
-               onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                Logout
-            </a>
-            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-            </form>
-
-
-        </div>
-    </div>
-</header>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-black sidebar-mini">
+<div class="wrapper">
 
 
+@include('admin.partials.topHeader')
+@include('admin.partials.navbars')
 
 
+@yield('content')
 
-{{--<div id="app">--}}
-{{--<nav class="navbar navbar-default navbar-static-top">--}}
-{{--<div class="container">--}}
-{{--<div class="navbar-header">--}}
+<!-- REQUIRED JS SCRIPTS -->
 
-{{--<!-- Collapsed Hamburger -->--}}
-{{--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">--}}
-{{--<span class="sr-only">Toggle Navigation</span>--}}
-{{--<span class="icon-bar"></span>--}}
-{{--<span class="icon-bar"></span>--}}
-{{--<span class="icon-bar"></span>--}}
-{{--</button>--}}
+    <!-- jQuery 2.2.3 -->
+    <script src="{{env('app_url')}}/assets/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="{{env('app_url')}}/assets/admin/bootstrap/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="{{env('app_url')}}/assets/admin/dist/js/app.min.js"></script>
 
-{{--<!-- Branding Image -->--}}
-{{--<a class="navbar-brand" href="{{ url('/') }}">--}}
-{{--{{ config('app.name', 'Laravel') }}--}}
-{{--</a>--}}
-{{--</div>--}}
 
-{{--<div class="collapse navbar-collapse" id="app-navbar-collapse">--}}
-{{--<!-- Left Side Of Navbar -->--}}
-{{--<ul class="nav navbar-nav">--}}
-{{--&nbsp;--}}
-{{--</ul>--}}
+    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+    <script src="{{env('app_url')}}/assets/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <script src="{{env('app_url')}}/assets/jQuery-File-Upload/js/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin -->
+    <script src="{{env('app_url')}}/assets/jQuery-File-Upload/js/jquery.fileupload.js"></script>
+@yield('script')
 
-{{--<!-- Right Side Of Navbar -->--}}
-{{--<ul class="nav navbar-nav navbar-right">--}}
-{{--<!-- Authentication Links -->--}}
-{{--@if (Auth::guest())--}}
-{{--<li><a href="{{ url('/login') }}">Login</a></li>--}}
-{{--<li><a href="{{ url('/register') }}">Register</a></li>--}}
-{{--@else--}}
-{{--<li class="dropdown">--}}
-{{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">--}}
-{{--{{}} <span class="caret"></span>--}}
-{{--</a>--}}
-
-{{--<ul class="dropdown-menu" role="menu">--}}
-{{--<li>--}}
-
-{{--</li>--}}
-{{--</ul>--}}
-{{--</li>--}}
-{{--@endif--}}
-{{--</ul>--}}
-{{--</div>--}}
-{{--</div>--}}
-{{--</nav>--}}
-
-{{--@yield('content')--}}
-{{--</div>--}}
-
-<!-- Scripts -->
-<script src="{{env('APP_URL')}}/assets/admin/js/script.js"></script>
+    <!-- Optionally, you can add Slimscroll and FastClick plugins.
+         Both of these plugins are recommended to enhance the
+         user experience. Slimscroll is required when using the
+         fixed layout. -->
+</div>
+<!-- ./wrapper -->
 </body>
 </html>
