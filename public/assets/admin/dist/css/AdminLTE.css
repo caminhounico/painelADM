@@ -3621,11 +3621,12 @@ table.text-center th {
 .box-widget {
     border: none;
     position: relative;
+    height: 300px ;
 }
 
 .widget-user .widget-user-header {
     padding: 20px;
-    height: 120px;
+    height: 200px;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
 }
@@ -3644,8 +3645,8 @@ table.text-center th {
 
 .widget-user .widget-user-image {
     position: absolute;
-    top: 65px;
-    left: 50%;
+    top: 5px;
+    right: 5%;
     margin-left: -45px;
 }
 

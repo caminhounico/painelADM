@@ -7,7 +7,7 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="{{Auth::user()->avatar}}" class="img-circle"
+                    <img src="../{{Auth::user()->avatar}}" class="img-circle"
                          alt="User Image">
                 </div>
                 <div class="pull-left info">
@@ -33,10 +33,14 @@
             <ul class="sidebar-menu">
                 <li class="header">&nbsp;</li>
                 <!-- Optionally, you can add icons to the links -->
-                <li class="menu-home"><a href="#"><i class="fa fa-home"></i> <span>Início</span></a></li>
-                <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+                <li class="menu-home"><a href="{{route('admin.home')}}"><i class="fa fa-home"></i> <span>Início</span></a></li>
+
+
+                <li class="header">Usuário</li>
+
+                <li class="menu-profile"><a href="{{route('admin.profile')}}"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+                    <a href="#"><i class="fa fa-user"></i> <span>Multilevel</span>
                         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

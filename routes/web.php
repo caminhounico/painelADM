@@ -25,6 +25,7 @@ Route::group([
     Route::get('/login', 'Auth\LoginController@login')->name('login');
     Route::post('/password/reset', 'Auth\ResetPasswordController@reset')->name('password.reset');
     Route::post('/avatar', 'UserController@storeAvatar')->name('avatar');
+    Route::get('/perfil', 'PanelController@profile')->name('profile');
 });
 
 
